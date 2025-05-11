@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cute Lo-fi Radio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #ffeefb;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Baloo 2', cursive;
+    }
+
+    .radio-container {
+      background: #fff0f6;
+      border: 6px solid #ffb3d9;
+      border-radius: 30px;
+      padding: 30px 40px;
+      box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+      text-align: center;
+      max-width: 350px;
+    }
+
+    .radio-title {
+      font-size: 1.8em;
+      color: #ff69b4;
+      margin-bottom: 10px;
+    }
+
+    .radio-now-playing {
+      font-size: 1em;
+      color: #d94e8f;
+      margin-bottom: 15px;
+    }
+
+    .radio {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .antenna {
+      width: 4px;
+      height: 40px;
+      background: #ff69b4;
+      margin-bottom: -20px;
+      transform: rotate(-15deg);
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="antenna"></div>
+
+  <div class="radio-container">
+    <div class="radio-title">📻 Lo-fi Radio</div>
+    <div class="radio-now-playing">Now Playing: Chill Study Beats</div>
+    <audio class="radio" controls autoplay loop>
+      <source src="https://stream.zeno.fm/fynw6r0b2f8uv" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+</body>
+</html>
