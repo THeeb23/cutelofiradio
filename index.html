@@ -36,32 +36,36 @@
     .radio-now-playing {
       font-size: 1em;
       color: #d94e8f;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
-    .radio {
-      width: 100%;
-      border-radius: 12px;
+    .play-button {
+      background-color: #ffb3d9;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .antenna {
-      width: 4px;
-      height: 40px;
-      background: #ff69b4;
-      margin-bottom: -20px;
-      transform: rotate(-15deg);
-      border-radius: 2px;
+    .play-button:hover {
+      background-color: #ff69b4;
+    }
+
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="antenna"></div>
-
   <div class="radio-container">
     <div class="radio-title">📻 Lo-fi Radio</div>
     <div class="radio-now-playing">Now Playing: Chill Study Beats</div>
-    <audio class="radio" controls autoplay loop>
+    <button class="play-button" onclick="document.getElementById('player').play()">▶️ Play Music</button>
+    <audio id="player" loop>
       <source src="https://stream.zeno.fm/fynw6r0b2f8uv" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
